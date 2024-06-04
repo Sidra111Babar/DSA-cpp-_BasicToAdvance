@@ -1,8 +1,14 @@
 #include <iostream>
 #include <list>
 using namespace std;
+
+//------------------------------------push_front(), push_back(),back(),front(),pop_front(),pop_back(),size(),begin()--> used to start iterator and iterator will go froward by using advance function,end()--->use with iterator to print the list,assign()----->used to insert same element multiple times() it will take two parameters(NoOfElement, element),insert()----> it will use to insert element at the desired position like but it will use with iterator
+//     --------------------------------------- implementation see from website 
 int main() {
-    
+    // push front is insert at head
+    // push back is insert at tail
+    // .front() is left most element or topmost   (give data on head)
+    // .back() right most element                 (give data on tail)
     list<int> myList;
     cout << "Ist Linked list by using push_front() Function" << endl;
     myList.push_front(5);    // push_front() is builtin functionof list and it is used to insert elements at front side
@@ -15,7 +21,7 @@ int main() {
     cout << "Last most element until here is " << myList.back() << endl;//back()(builtin function to access lastmost element)
     cout << "Linked List after insertion at the beginning: ";  
     for (const auto& element : myList) {    // range based loop, auto key word automatically identify datatype
-           cout << element << " ";          // top most element always print first when use loop
+           cout << element;          // top most element always print first when use loop
     }
     cout << endl;
     cout << "2nd Linked list by using push_back() Function" << endl;
@@ -35,7 +41,7 @@ int main() {
     cout << endl;
 
     cout << "Now push two more elements in Ist Linked list by using push_back() function" << endl;
-    myList.push_back(4);     //push_back() is builtin function used to remove elements
+    myList.push_back(4);     //push_back() is builtin function used to add elements at tail of linked list
     myList.push_back(5);
 
     
@@ -60,8 +66,7 @@ int main() {
     // Now 'it' points to the third element in the list
     cout << "Element at position 3: " << *it << endl;
 
-    
+   
 
     return 0;
 }
-
